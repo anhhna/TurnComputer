@@ -6,7 +6,7 @@ SECRET = 'nmGnoQr8oWMhSD7MpRMWEqww1H8ZGDabalkjclfe'
 EMAIL = 'youremail'
 authentication = firebase.FirebaseAuthentication(SECRET, EMAIL)
 
-firebase_url = 'https://turncomputer.firebaseio.com/'
+firebase_url = 'https://yourappname.firebaseio.com/'
 fixed_interval = 100
 firebase = firebase.FirebaseApplication(firebase_url, authentication)
 
@@ -17,8 +17,10 @@ gpio.output(ledPin, gpio.HIGH)
 
 while True:
 	try:
+		# get the value of turn node
 		result = firebase.get('/turn', None)
 		print(result)
+		# if value of turn is on, turn on the computer and set to off
 		if result == 'on':
 			resultPut = firebase.put('/', 'turn', 'off')
 			print(resultPut)
