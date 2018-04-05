@@ -6,7 +6,7 @@ Turn your computer on remotely from anywhere using:
 Video demo: https://www.youtube.com/watch?v=x6AVhbW0dEs
 
 * Install dependencies on Raspberry:
-pip3 install python-firebase
+> pip3 install python-firebase
 
 * On raspberry, edit your rc.local file for running the command on raspberry startup (not boot to Desktop)
 
