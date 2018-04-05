@@ -9,9 +9,13 @@ Video demo: https://www.youtube.com/watch?v=x6AVhbW0dEs
 pip3 install python-firebase
 
 * On raspberry, edit your rc.local file for running the command on raspberry startup (not boot to Desktop)
-  sudo nano /etc/rc.local
+
+> sudo nano /etc/rc.local
+
 add this command: 
-  python3 /home/pi/Documents/Turn.py &
+
+python3 /home/pi/Documents/Turn.py &
+
 remember it need to before line exit(0) in rc.local
 
 * Refenrece to GPIO folder to get more details how to put the GPIO pin work
